@@ -41,6 +41,25 @@ router.get('/testsql', async (request, response) => {
     }
 });
 
+//?POST /api/sendMessage
+const array = []; //? TOP-LEVEL CODE
+router.post('/sendMessage', (request, response) => {
+    const body = request.body;
+    console.log(request.body);
+    const sender = body.sender; //? request.body.sender
+    const message = body.message; //? request.body.message
+
+    array.push({
+        sender: sender,
+        message: message
+    });
+
+    console.log(array);
+    response.status(200).json({
+        message: 'Üzenet fogadva'
+    });
+});
+
 //* router.get => Ez hoz létre egy GET végpontot
 //* Első paraméter: Az útvonalat határozza meg
 //* Második paraméter: Callback függvény => request, response

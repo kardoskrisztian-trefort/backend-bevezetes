@@ -15,13 +15,22 @@
         <script src="../javascript/index.js"></script>
     </head>
     <body>
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
             <div class="row text-center">
                 <h1 class="display-1">A szerver fut.</h1>
             </div>
         </div>
 
-        <a href="/bruno">Brúno oldala</a>
+        <a href="/bruno">Brúno oldala</a> -->
         <!-- *Hivatkozás a routing-ban létrehozott url-re -->
+
+        <form>
+            <label for="senderText">Sender: </label>
+            <input type="text" id="senderText" />
+            <label for="messageText">Message: </label>
+            <input type="text" id="messageText" />
+            <input type="button" value="Üzenet küldése" id="sendBtn" />
+            <span id="forResponse"></span>
+        </form>
     </body>
 </html>
